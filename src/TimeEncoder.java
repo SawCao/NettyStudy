@@ -9,6 +9,7 @@ import io.netty.channel.ChannelPromise;
  * User: caorui
  * Time: 2018/10/16
  **/
+//对将要发送的POJO写入发送buffer中
 public class TimeEncoder extends ChannelOutboundHandlerAdapter {
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) {

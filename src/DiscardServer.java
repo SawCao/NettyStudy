@@ -25,7 +25,9 @@ public class DiscardServer {
     }
 
     public void run() throws Exception {
+        //Boss接受新连接线程，主要负责创建新连接
         EventLoopGroup bossGroup = new NioEventLoopGroup(); // (1)
+        //worker负责读取数据的线程，主要用于读取数据以及业务逻辑处理
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap b = new ServerBootstrap(); // (2)
